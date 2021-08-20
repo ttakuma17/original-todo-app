@@ -59,29 +59,52 @@ const onClickAdd = () => {
       // 配置するボタンの定義
       const backTodoButton = document.createElement("button");
       backTodoButton.innerText = "Back to Todo";
-      // ここから続きをする
       //backTodoButtonがクリックされたときの動きを記載する
-      // backTodoButton.addEventListener("click", () => {
-      //   const deleteTarget = backTodoButton.parentNode;
-      //   document.getElementById("pending-list").removeChild(deleteTarget);
-      //   const text = backTodoButton.parentNode.firstElementChild.innerText;
+      backTodoButton.addEventListener("click", () => {
+        // alert("back todo");//alertの動作確認
+        const deleteTarget = backTodoButton.parentNode;
+        document.getElementById("pending-list").removeChild(deleteTarget);
+        const text = backTodoButton.parentNode.firstElementChild.innerText;
 
-      //   const div = document.createElement("div");
-      //   div.className = "list-row";
-      //   //liタグ作成
-      //   const li = document.createElement("li");
-      //   li.innerText = text;
-
-      //   div.appendChild(li);
-      //   div.appendChild(workingButton);
-      //   div.appendChild(pendingButton);
-      //   div.appendChild(deleteButton);
-
-      //   document.getElementById("working-list").appendChild(div);
-      // });
+        const div = document.createElement("div");
+        div.className = "list-row";
+        //liタグ作成
+        const li = document.createElement("li");
+        li.innerText = text;
+        // console.log(text); //ここまでは稼働
+        //todoリストに必要な要素を追加
+        div.appendChild(li);
+        div.appendChild(workingButton);
+        div.appendChild(pendingButton);
+        div.appendChild(deleteButton);
+        // working-listへdiv要素をappend
+        // console.log(div); //div要素の追加までは完了
+        document.getElementById("incomplete-list").appendChild(div);
+      });
 
       const backtoWorkButton = document.createElement("button");
       backtoWorkButton.innerText = "Back to Work";
+      backtoWorkButton.addEventListener("click", () => {
+        //alert("back to work"); //稼働確認
+        const deleteTarget = backtoWorkButton.parentNode;
+        document.getElementById("pending-list").removeChild(deleteTarget);
+        const text = backtoWorkButton.parentNode.firstElementChild.innerText;
+
+        const div = document.createElement("div");
+        div.className = "list-row";
+        //liタグ作成
+        const li = document.createElement("li");
+        li.innerText = text;
+        // console.log(text); //ここまでは稼働
+        //todoリストに必要な要素を追加
+        div.appendChild(li);
+        div.appendChild(pendingButton);
+        div.appendChild(completeButton);
+        // console.log(div);//挙動確認
+        // working-listへdiv要素をappend
+        // console.log(div); //div要素の追加までは完了
+        document.getElementById("working-list").appendChild(div);
+      });
 
       div.appendChild(li);
       div.appendChild(backTodoButton);
@@ -110,7 +133,32 @@ const onClickAdd = () => {
       backTodoButton.innerText = "Back to Todo";
       const deleteButton = document.createElement("button");
       deleteButton.innerText = "Delete";
+      //backTodoButtonがクリックされたときの動きを記載する
 
+      backTodoButton.addEventListener("click", () => {
+        // alert("back todo"); //alertの動作確認
+        const deleteTarget = backTodoButton.parentNode;
+        document.getElementById("complete-list").removeChild(deleteTarget);
+        const text = backTodoButton.parentNode.firstElementChild.innerText;
+        const div = document.createElement("div");
+        div.className = "list-row";
+        //liタグ作成
+        const li = document.createElement("li");
+        li.innerText = text;
+        // console.log(text); //ここまでは稼働
+        //todoリストに必要な要素を追加
+        div.appendChild(li);
+        div.appendChild(workingButton);
+        div.appendChild(pendingButton);
+        div.appendChild(deleteButton);
+        // working-listへdiv要素をappend
+        // console.log(div); //div要素の追加までは完了
+        document.getElementById("incomplete-list").appendChild(div);
+      });
+      deleteButton.addEventListener("click", () => {
+        const deleteTarget = deleteButton.parentNode;
+        document.getElementById("complete-list").removeChild(deleteTarget);
+      });
       div.appendChild(li);
       div.appendChild(backTodoButton);
       div.appendChild(deleteButton);
@@ -124,7 +172,6 @@ const onClickAdd = () => {
     addTarget.appendChild(completeButton);
     // console.log(addTarget); working　on todo の画面と同じ項目の追加に成功
     document.getElementById("working-list").appendChild(addTarget);
-    // DoneボタンはWorkingエリアに来ないと出てこない＝データも連結させる必要がある
     // const completeButton = document.createElement("button");
     // completeButton.innerText = "Done";
   });
