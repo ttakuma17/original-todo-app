@@ -1,16 +1,75 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
 
-<head>
-	<title>Parcel Sandbox</title>
-	<meta charset="UTF-8" />
-</head>
+  <body>
+    <p class="title">Manage Your Todo</p>
+    <div class="input-area">
+      <!-- 入力ボタン -->
+      <input id="add-todo" type="text" placeholder="Enter your todo" />
+      <button id="add-button">Add</button>
+    </div>
 
-<body>
-	<div id="app"></div>
+    <div class="incomplete-area">
+      <!-- todoの一覧 -->
+      <p class="title">Todo List</p>
+      <ul id="incomplete-list">
+        <div class="list-row">
+          <li>Todo test</li>
+          <button>Working</button>
+          <button>Pending</button>
+          <button>Delete</button>
+        </div>
+      </ul>
+    </div>
 
-	<script src="src/index.js">
-	</script>
-</body>
+    <div class="working-area">
+      <!-- 取組中 -->
+      <p class="title">Working on Todo</p>
+      <ul id="working-list">
+        <div class="list-row">
+          <li>working todo</li>
+          <button>Pending</button>
+          <button>Done</button>
+        </div>
+      </ul>
+    </div>
+    <div class="pending-area">
+      <!-- 保留 -->
+      <p class="title">Pending Todo List</p>
+      <ul id="pending-list">
+        <div class="list-row">
+          <li>pending todo</li>
+          <button>Back to Todo</button>
+          <button>Back to Working</button>
+        </div>
+        <div class="list-row">
+          <li>pending todo2</li>
+          <button>Back to Todo</button>
+          <button>Back to Working</button>
+        </div>
+      </ul>
+    </div>
+    <div class="complete-area">
+      <!-- 完了済みのTodo -->
+      <p class="title">Complete Todo List</p>
+      <ul id="complete-list">
+        <div class="list-row">
+          <li>completed todo</li>
+          <button>Back to Todo</button>
+          <button>Delete</button>
+        </div>
+        <div class="list-row">
+          <li>completed todo2</li>
+          <button>Back to Todo</button>
+          <button>Delete</button>
+        </div>
+      </ul>
+    </div>
 
+    <script src="src/index.js"></script>
+  </body>
 </html>
