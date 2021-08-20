@@ -26,7 +26,12 @@ button:hover {
 }
 
 .title {
-  font-weight: 600;
+  /* font-weight: 600; */
+  text-align: center;
+  border-top: double 1px;
+  border-bottom: double 1px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 li {
@@ -34,26 +39,26 @@ li {
 }
 
 .input-area {
-  border-bottom: dashed 1px;
+  /* border-bottom: dashed 1px; */
   width: 400px;
-  height: 30px;
+  height: 8px;
   padding: 8px;
-  padding-bottom: 30px;
+  padding-bottom: 5px;
   margin: 8px;
   /* border-radius: 8px; */
 }
 
 .incomplete-area {
-  border-bottom: dashed 1px;
+  /* border-bottom: dashed 1px; */
   width: 400px;
-  min-height: 100px;
+  min-height: 50px;
   padding: 8px;
   margin: 8px;
   /* border-radius: 8px; */
 }
 
 .working-area {
-  border-bottom: dashed 1px;
+  /* border-bottom: dashed 1px; */
   width: 400px;
   min-height: 50px;
   padding: 8px;
@@ -62,7 +67,7 @@ li {
 }
 
 .pending-area {
-  border-bottom: dashed 1px;
+  /* border-bottom: dashed 1px; */
   width: 400px;
   min-height: 50px;
   padding: 8px;
@@ -71,7 +76,7 @@ li {
 }
 
 .complete-area {
-  border-bottom: dashed 1px;
+  /* border-bottom: dashed 1px; */
   width: 400px;
   min-height: 100px;
   padding: 8px;
