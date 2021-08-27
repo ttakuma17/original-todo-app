@@ -31,7 +31,8 @@ input[type="text"] {
 button {
   padding: 4px 10px;
   margin-left: 5px;
-  border: none;
+  color: rgb(23 35 123);
+  border: solid 0.2px;
   border-radius: 24px;
 }
 
