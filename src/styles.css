@@ -1,7 +1,25 @@
 body {
   font-family: sans-serif;
-  background-color: #2f496e;
-  color: #f4eade;
+  /* background-color: #2f496e; */
+  color: rgb(23 35 123);
+  /* background-color:rgb(243 243 250); */
+}
+
+/* 色を整える　　◇風花　　https://ai-create.net/magazine/2017/10/23/colorpatterns/ */
+header {
+  width: 400px;
+  color: white;
+  border-bottom: solid 1px;
+  background-color: rgb(23 35 123);
+  padding: 10px;
+  font-weight: 700;
+}
+
+input[type="text"] {
+  padding: 0;
+  line-height: 28px;
+  height: 25px;
+  font-size: 15px;
 }
 
 .list-row {
@@ -19,15 +37,16 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: #2988bc;
-  color: #f4eade;
+  color: white;
+  background-color: rgb(23 35 123);
+  /* color: #f4eade; */
   /* border: solid 0.2px; */
   /* border-color: #f4eade; */
 }
 
 .title {
   /* font-weight: 600; */
-  text-align: center;
+  text-align: left;
   border-top: double 1px;
   border-bottom: double 1px;
   padding-top: 3px;
@@ -88,4 +107,12 @@ li {
   min-height: 100px;
   padding: 8px;
   margin: 8px;
+}
+
+footer {
+  background-color: rgb(23 35 123);
+  color: white;
+  width: 400px;
+  padding: 0 10px 0 10px;
+  text-align: right;
 }
